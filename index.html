@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFusion Shop | iPhone & Accesorios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="#inicio" class="logo">
+            <img src="imagenes/logo.png.PNG" alt="iFusion Shop" class="logo-png">
+        </a>
+    </div>
+
+    <div class="nav-center">
+        <div class="search-container">
+            <input type="text" placeholder="Buscar iPhone, accesorios...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span class="menu-text"></span>
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <img src="imagenes/logo.png.PNG" alt="Logo" class="logo-small">
+        <i class="fas fa-times close-icon" onclick="toggleMenu()"></i>
+    </div>
+    <ul class="sidebar-links">
+        <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+        <li><a href="#telefonos" onclick="toggleMenu()">iPhones</a></li>
+        <li><a href="#accesorios" onclick="toggleMenu()">Accesorios</a></li>
+        <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+    </ul>
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>iFusion Shop</h1>
+            <p>La mejor tecnología Apple y accesorios premium en un solo lugar.</p>
+            <a href="#telefonos" class="btn-main">Explorar Catálogo</a>
+        </div>
+    </section>
+
+    <section id="telefonos" class="section-padding">
+        <h2 class="titulo-seccion">Nuestros iPhones</h2>
+        <div class="grid-productos">
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/1200x/f6/f4/7b/f6f47b7c97a5087541fc75b5bbe43076.jpg" alt="iPhone">
+                <h3>iPhone 11</h3>
+                <p class="precio">S/900.00</p>
+                <a href="https://wa.me/991068893?text=Hola! Me interesa el iPhone 11" class="btn-comprar">Consultar WhatsApp</a>
+            </div>
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/736x/60/35/2a/60352adc2af4cd95f9d5e2556ba886a5.jpg" alt="iPhone">
+                <h3>iPhone 12</h3>
+                <p class="precio">S/1200.00</p>
+                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
+            </div>
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/736x/76/5f/f1/765ff169758d563fe0d5ee82b559bef5.jpg" alt="iPhone">
+                <h3>iPhone 13</h3>
+                <p class="precio">S/1600.00</p>
+                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
+            </div>
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/1200x/b2/21/8d/b2218d13d55719c97d93fc272a978705.jpg" alt="iPhone">
+                <h3>iPhone 14</h3>
+                <p class="precio">S/ 1850.00</p>
+                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
+            </div>
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/736x/51/bf/c5/51bfc594fe5f8d2e1316874078c6db4a.jpg" alt="iPhone">
+                <h3>iPhone 15</h3>
+                <p class="precio">S/ 2300.00</p>
+                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
+            </div>
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/1200x/6f/df/87/6fdf8766c846687360fca45f0fafb0c5.jpg" alt="iPhone">
+                <h3>iPhone 16</h3>
+                <p class="precio">S/2700.00</p>
+                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="accesorios" class="section-padding bg-light">
+        <h2 class="titulo-seccion">Accesorios Premium</h2>
+        <div class="grid-accesorios">
+            <div class="tarjeta-small">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGKN4?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1758235411307" alt="Accesorio">
+                <h4>Adaptador 35w</h4>
+                <p class="precio">S/45.00</p>
+                <a href="https://wa.me/991068893" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/736x/28/08/49/2808490bdc57b84b63c57683f71db638.jpg" alt="Acc"><h4>Cable Lightning</h4><p class="precio">S/30.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://www.pngmart.com/files/23/Airpods-Pro-PNG-File.png" alt="Acc"><h4>AirPods Pro 2 (ANC)</h4><p class="precio">S/110.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/d1/3a/76/d13a76ded0afef3885a23d95e5393ce9.jpg" alt="Acc"><h4>Cable Usb C - Usb C</h4><p class="precio">S/35.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/d4/6a/f7/d46af73f6df9fa9feb2bacb4e7812848.jpg" alt="Acc"><h4>Airpods 4 (ANC)</h4><p class="precio">S/130.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://5.imimg.com/data5/SELLER/Default/2024/7/436201180/YZ/XE/ZP/26276166/apple-magsafe-power-bank-1000x1000.jpg" alt="Acc"><h4>Battery Pack 20 0000 mAh</h4><p class="precio">S/80.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/6c/57/41/6c574137663d43b07c6fde7af7a9dd44.jpg" alt="Acc"><h4>Battery Pack 10 0000 mAh</h4><p class="precio">S/65.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/736x/c0/67/b7/c067b7019903bc1318751fd77d51fd96.jpg" alt="Acc"><h4>Battery Pack 5000 mAh</h4><p class="precio">S/50.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/84/f7/fd/84f7fdbff23e549badc45574729f695f.jpg" alt="Acc"><h4>Adaptador 20w</h4><p class="precio">S/35.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/36/2d/be/362dbe2a057dad33fa90b3bbcb63cce6.jpg" alt="Acc"><h4>Adaptador 35w</h4><p class="precio">S/40.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section-padding contacto-section">
+        <h2 class="titulo-seccion">Visítanos</h2>
+        <div class="contacto-container">
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i> Sullana, Bellavista - Piura</p>
+                <p><i class="fas fa-phone"></i> +51 991 068 893</p>
+                <p><i class="fas fa-envelope"></i> contacto@ifusionshop.com</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="flotantes">
+        <a href="https://instagram.com/iFusion_Shop" class="btn-flotante ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/991068893" class="btn-flotante wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+<script>
+    function toggleMenu() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

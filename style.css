@@ -1,0 +1,399 @@
+:root {
+    --apple-black: #1d1d1f;
+    --apple-gray: #f5f5f7;
+    --apple-blue: #0066cc;
+    --whatsapp-green: #25d366;
+    --insta-pink: #e1306c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    color: var(--apple-black);
+    background-color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span { color: var(--apple-blue); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--apple-black);
+    margin-left: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover { color: var(--apple-blue); }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url(imagenes/fondo.jpg) center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+.btn-main {
+    padding: 15px 40px;
+    background: var(--apple-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Secciones y Grids */
+.section-padding { padding: 100px 8%; }
+.bg-light { background-color: var(--apple-gray); }
+.titulo-seccion { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+/* Grid Teléfonos (6) */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Grid Accesorios (10) */
+.grid-accesorios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas */
+.tarjeta, .tarjeta-small {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+.tarjeta:hover, .tarjeta-small:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.tarjeta img { width: 100%; height: 300px; object-fit: contain; }
+.tarjeta-small img { width: 100%; height: 150px; object-fit: contain; }
+
+.precio {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.btn-comprar {
+    display: block;
+    background: var(--apple-black);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.btn-whatsapp-small {
+    display: inline-block;
+    background: var(--whatsapp-green);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* Botones Flotantes */
+.flotantes {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2000;
+}
+
+.btn-flotante {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.ig { background: var(--insta-pink); }
+.wa { background: var(--whatsapp-green); }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Simplificación para móvil */
+}
+/* Estilos generales de la Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.nav-left .logo-png {
+    height: 120px; /* Ajusta según el tamaño de tu logo */
+    display: block;
+}
+
+/* Barra de búsqueda central */
+.nav-center {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 30px;
+}
+
+.search-container {
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 25px;
+    padding: 5px 15px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.search-container:focus-within {
+    background: #fff;
+    border-color: #0071e3; /* Azul estilo Apple */
+    box-shadow: 0 0 5px rgba(0,113,227,0.2);
+}
+
+.search-container input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.search-container button {
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+/* Menú derecho */
+.nav-right .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-right .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-right .nav-links a:hover {
+    color: #0071e3;
+}
+
+.menu-icon {
+    display: none; /* Se activa en móviles */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .nav-center {
+        display: none; /* Oculta búsqueda en móviles muy pequeños o podrías moverla */
+    }
+    .nav-links {
+        display: none; /* Oculta links para usar el icono de menú */
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+/* --- Solución para la Imagen del Logo --- */
+.logo-png {
+    height: 120px; /* Aquí dale el tamaño grande que quieras */
+    width: auto;
+    display: block;
+    /* Esto permite que el logo sea más alto que la barra sin deformarla */
+    margin-top: 10px; 
+    object-fit: contain;
+    /* Si quieres que el logo 'flote' un poco sobre el inicio, usa esto: */
+    position: relative;
+    z-index: 1001;
+}
+
+/* --- Navbar --- */
+.navbar {
+    height: 80px; /* Forzamos una altura fija y elegante para la barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; /* Quitamos padding vertical para que la altura la mande el height */
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-center {
+    flex: 0 1 400px;
+}
+
+.search-container {
+    display: flex;
+    background: #f5f5f7;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.search-container input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+
+/* --- Menú Deslizable (Sidebar) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Escondido a la derecha */
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    z-index: 2000;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 30px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar.active {
+    right: 0; /* Se desliza hacia adentro */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo-small { height: 100px; }
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin: 25px 0;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: #1d1d1f;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-links a:hover {
+    color: #0071e3;
+}
+
+/* Capa oscura */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1500;
+}
+
+.overlay.active {
+    display: block;
+}
