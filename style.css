@@ -62,7 +62,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url(imagenes/fondo.jpg) center/cover;
+                url(fondo.jpg) center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -397,3 +397,4 @@ body {
 .overlay.active {
     display: block;
 }
+
