@@ -3,144 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iFusion Shop | iPhone & Accesorios</title>
+    <title>iFusion Shop | Telefonos y Accesorios</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="#inicio" class="logo">
-            <img src="logo.png.PNG" alt="iFusion Shop" class="logo-png">
-        </a>
-    </div>
-
-    <div class="nav-center">
-        <div class="search-container">
-            <input type="text" placeholder="Buscar iPhone, accesorios...">
-            <button><i class="fas fa-search"></i></button>
+<nav class="glass-nav">
+    <div class="nav-content">
+        <img src="logo.png.PNG" class="logo-apple">
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Buscar en iFusion..." onkeyup="filterProducts()">
         </div>
-    </div>
-
-    <div class="nav-right">
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span class="menu-text"></span>
-            <i class="fas fa-bars"></i>
+        <div class="menu-trigger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </div>
 </nav>
 
 <div id="sidebar" class="sidebar">
-    <div class="sidebar-header">
-        <img src="logo.png.PNG" alt="Logo" class="logo-small">
-        <i class="fas fa-times close-icon" onclick="toggleMenu()"></i>
-    </div>
-    <ul class="sidebar-links">
-        <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
-        <li><a href="#telefonos" onclick="toggleMenu()">iPhones</a></li>
+    <ul class="nav-links">
+        <li><a href="#novedades" onclick="toggleMenu()">Novedades</a></li>
+        <li><a href="#iphone" onclick="toggleMenu()">iPhone</a></li>
         <li><a href="#accesorios" onclick="toggleMenu()">Accesorios</a></li>
-        <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+        <li><a href="#referencias" onclick="toggleMenu()">Envíos</a></li>
     </ul>
 </div>
 
-<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
-<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>iFusion Shop</h1>
-            <p>La mejor tecnología Apple y accesorios premium en un solo lugar.</p>
-            <a href="#telefonos" class="btn-main">Explorar Catálogo</a>
+<section class="hero-apple">
+    <div class="hero-text">
+        <h1>iFusion Shop</h1>
+        <p>Lo mejor en calidad para tu iphone.</p>
+        <div class="hero-links">
+            <a href="#iphone" class="link-blue">Comprar ></a>
+            <a href="https://wa.me/51991068893" class="link-blue">Consultar ></a>
         </div>
-    </section>
-
-    <section id="telefonos" class="section-padding">
-        <h2 class="titulo-seccion">Nuestros iPhones</h2>
-        <div class="grid-productos">
-            <div class="tarjeta">
-                <img src="https://i.pinimg.com/1200x/f6/f4/7b/f6f47b7c97a5087541fc75b5bbe43076.jpg" alt="iPhone">
-                <h3>iPhone 11</h3>
-                <p class="precio">S/900.00</p>
-                <a href="https://wa.me/991068893?text=Hola! Me interesa el iPhone 11" class="btn-comprar">Consultar WhatsApp</a>
-            </div>
-            <div class="tarjeta">
-                <img src="https://i.pinimg.com/736x/60/35/2a/60352adc2af4cd95f9d5e2556ba886a5.jpg" alt="iPhone">
-                <h3>iPhone 12</h3>
-                <p class="precio">S/1200.00</p>
-                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
-            </div>
-            <div class="tarjeta">
-                <img src="https://i.pinimg.com/736x/76/5f/f1/765ff169758d563fe0d5ee82b559bef5.jpg" alt="iPhone">
-                <h3>iPhone 13</h3>
-                <p class="precio">S/1600.00</p>
-                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
-            </div>
-            <div class="tarjeta">
-                <img src="https://i.pinimg.com/1200x/b2/21/8d/b2218d13d55719c97d93fc272a978705.jpg" alt="iPhone">
-                <h3>iPhone 14</h3>
-                <p class="precio">S/ 1850.00</p>
-                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
-            </div>
-            <div class="tarjeta">
-                <img src="https://i.pinimg.com/736x/51/bf/c5/51bfc594fe5f8d2e1316874078c6db4a.jpg" alt="iPhone">
-                <h3>iPhone 15</h3>
-                <p class="precio">S/ 2300.00</p>
-                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
-            </div>
-            <div class="tarjeta">
-                <img src="https://i.pinimg.com/1200x/6f/df/87/6fdf8766c846687360fca45f0fafb0c5.jpg" alt="iPhone">
-                <h3>iPhone 16</h3>
-                <p class="precio">S/2700.00</p>
-                <a href="https://wa.me/991068893" class="btn-comprar">Consultar WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="accesorios" class="section-padding bg-light">
-        <h2 class="titulo-seccion">Accesorios Premium</h2>
-        <div class="grid-accesorios">
-            <div class="tarjeta-small">
-                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGKN4?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1758235411307" alt="Accesorio">
-                <h4>Adaptador 35w</h4>
-                <p class="precio">S/45.00</p>
-                <a href="https://wa.me/991068893" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/736x/28/08/49/2808490bdc57b84b63c57683f71db638.jpg" alt="Acc"><h4>Cable Lightning</h4><p class="precio">S/30.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://www.pngmart.com/files/23/Airpods-Pro-PNG-File.png" alt="Acc"><h4>AirPods Pro 2 (ANC)</h4><p class="precio">S/110.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/d1/3a/76/d13a76ded0afef3885a23d95e5393ce9.jpg" alt="Acc"><h4>Cable Usb C - Usb C</h4><p class="precio">S/35.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/d4/6a/f7/d46af73f6df9fa9feb2bacb4e7812848.jpg" alt="Acc"><h4>Airpods 4 (ANC)</h4><p class="precio">S/130.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://5.imimg.com/data5/SELLER/Default/2024/7/436201180/YZ/XE/ZP/26276166/apple-magsafe-power-bank-1000x1000.jpg" alt="Acc"><h4>Battery Pack 20 0000 mAh</h4><p class="precio">S/80.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/6c/57/41/6c574137663d43b07c6fde7af7a9dd44.jpg" alt="Acc"><h4>Battery Pack 10 0000 mAh</h4><p class="precio">S/65.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/736x/c0/67/b7/c067b7019903bc1318751fd77d51fd96.jpg" alt="Acc"><h4>Battery Pack 5000 mAh</h4><p class="precio">S/50.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/84/f7/fd/84f7fdbff23e549badc45574729f695f.jpg" alt="Acc"><h4>Adaptador 20w</h4><p class="precio">S/35.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-            <div class="tarjeta-small"><img src="https://i.pinimg.com/1200x/36/2d/be/362dbe2a057dad33fa90b3bbcb63cce6.jpg" alt="Acc"><h4>Adaptador 35w</h4><p class="precio">S/40.00</p><a href="#" class="btn-whatsapp-small"><i class="fab fa-whatsapp"></i></a></div>
-        </div>
-    </section>
-
-    <section id="contacto" class="section-padding contacto-section">
-        <h2 class="titulo-seccion">Visítanos</h2>
-        <div class="contacto-container">
-            <div class="info">
-                <p><i class="fas fa-map-marker-alt"></i> Sullana, Bellavista - Piura</p>
-                <p><i class="fas fa-phone"></i> +51 991 068 893</p>
-                <p><i class="fas fa-envelope"></i> contacto@ifusionshop.com</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="flotantes">
-        <a href="https://instagram.com/iFusion_Shop" class="btn-flotante ig" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/991068893" class="btn-flotante wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
+</section>
+
+<section id="novedades" class="section-v">
+    <h2 class="title-apple">Lo nuevo, <span>Recién llegado.</span></h2>
+    <div class="novedades-wrapper">
+        <div class="novedades-track" id="track">
+            
+            <div class="novedad-slide" style="background-image: url('https://media2.allzone.es/3575983-large_default/iphone-16-pro-128gb-desierto.jpg');">
+                <div class="novedad-overlay">
+                    <div class="novedad-content">
+                        <span class="tag-new">LO ÚLTIMO</span>
+                        <h2>iPhone 16 Pro</h2>
+                        <p>Titanio del desierto. Una nueva era de potencia.</p>
+                        <button class="btn-glass" onclick="buyAcc('iPhone 16 Pro')">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="novedad-slide" style="background-image: url('https://m-cdn.phonearena.com/images/reviews/245545-image/BK6A9873.jpg?w=1');">
+                <div class="novedad-overlay">
+                    <div class="novedad-content">
+                        <span class="tag-new">SONIDO</span>
+                        <h2>AirPods Pro 2</h2>
+                        <p>Cancelación de ruido hasta 2 veces más potente.</p>
+                        <button class="btn-glass" onclick="buyAcc('AirPods Pro 2')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="novedad-slide" style="background-image: url('https://www.apple.com/newsroom/images/2024/09/introducing-apple-watch-series-10/article/Apple-Watch-Series-10-lineup-240909_big.jpg.large_2x.jpg');">
+                <div class="novedad-overlay">
+                    <div class="novedad-content">
+                        <span class="tag-new">SALUD</span>
+                        <h2>Watch Series 10</h2>
+                        <p>Nuestra pantalla más grande hasta ahora.</p>
+                        <button class="btn-glass" onclick="buyAcc('Watch S10')">Explorar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="novedad-slide" style="background-image: url('https://images.unsplash.com/photo-1615526675159-e248c3021d3f?q=80&w=1200&auto=format&fit=crop');">
+                <div class="novedad-overlay">
+                    <div class="novedad-content">
+                        <span class="tag-new">ENERGÍA</span>
+                        <h2>Ecosistema MagSafe</h2>
+                        <p>Acopla. Carga. Personaliza.</p>
+                        <button class="btn-glass" onclick="buyAcc('MagSafe Accs')">Ver Colección</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="novedad-slide" style="background-image: url('https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=1200&auto=format&fit=crop');">
+                <div class="novedad-overlay">
+                    <div class="novedad-content">
+                        <span class="tag-new">CREATIVIDAD</span>
+                        <h2>iPad Air M2</h2>
+                        <p>Dos tamaños. Posibilidades infinitas.</p>
+                        <button class="btn-glass" onclick="buyAcc('iPad Air')">Más información</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dots-container">
+            <span class="dot active" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(3)"></span>
+            <span class="dot" onclick="setSlide(4)"></span>
+        </div>
+    </div>
+</section>
+
+<section id="iphone" class="section-v">
+    <h2 class="title-apple">¿Cuál es el iPhone ideal para ti?</h2>
+    <div class="apple-grid">
+        <script>
+            const phones = [
+                {n: '16', p: 2900, img: 'https://i.pinimg.com/1200x/6f/df/87/6fdf8766c846687360fca45f0fafb0c5.jpg'},
+                {n: '15', p: 2400, img: 'https://i.pinimg.com/736x/51/bf/c5/51bfc594fe5f8d2e1316874078c6db4a.jpg'},
+                {n: '14', p: 1900, img: 'https://i.pinimg.com/1200x/b2/21/8d/b2218d13d55719c97d93fc272a978705.jpg'},
+                {n: '13', p: 1600, img: 'https://i.pinimg.com/736x/76/5f/f1/765ff169758d563fe0d5ee82b559bef5.jpg'},
+                {n: '12', p: 1250, img: 'https://i.pinimg.com/736x/60/35/2a/60352adc2af4cd95f9d5e2556ba886a5.jpg'},
+                {n: '11', p: 850, img: 'https://i.pinimg.com/1200x/f6/f4/7b/f6f47b7c97a5087541fc75b5bbe43076.jpg'}
+            ];
+            phones.forEach(x => {
+                document.write(`
+                <div class="apple-card searchable">
+                    <img src="${x.img}">
+                    <h3>iPhone ${x.n}</h3>
+                    <div class="card-selectors">
+                        <select onchange="update(this)" class="m-sel">
+                            <option value="${x.p}" data-m="iPhone ${x.n}">Standard</option>
+                            <option value="${x.p+400}" data-m="iPhone ${x.n} Pro">Pro</option>
+                            <option value="${x.p+750}" data-m="iPhone ${x.n} Pro Max">Pro Max</option>
+                        </select>
+                        <select onchange="update(this)" class="s-sel">
+                            <option value="0" data-s="128GB">128GB</option>
+                            <option value="250" data-s="256GB">256GB (+S/250)</option>
+                        </select>
+                    </div>
+                    <p class="apple-price">S/ <span>${x.p}.00</span></p>
+                    <button class="apple-btn" onclick="buyPhone(this)">Comprar</button>
+                </div>`);
+            });
+        </script>
+    </div>
+</section>
+
+<section id="accesorios" class="section-v">
+    <h2 class="title-apple">Accesorios Esenciales.</h2>
+    
+    <div class="category-group">
+        <h3>Sonido</h3>
+        <div class="apple-scroll">
+            <div class="mini-card searchable"><img src="https://www.pngmart.com/files/23/Airpods-Pro-PNG-File.png"><h4>AirPods Pro 2</h4><p>S/ 110</p><button onclick="buyAcc('AirPods Pro 2')">+</button></div>
+            <div class="mini-card searchable"><img src="https://i.pinimg.com/1200x/d4/6a/f7/d46af73f6df9fa9feb2bacb4e7812848.jpg"><h4>AirPods 4</h4><p>S/ 130</p><button onclick="buyAcc('AirPods 4')">+</button></div>
+            <div class="mini-card searchable"><img src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121205-airpods-max.png"><h4>AirPods Max</h4><p>S/ 350</p><button onclick="buyAcc('AirPods Max')">+</button></div>
+        </div>
+    </div>
+
+    <div class="category-group">
+        <h3>Energía</h3>
+        <div class="apple-scroll">
+            <div class="mini-card searchable"><img src="https://i.pinimg.com/1200x/84/f7/fd/84f7fdbff23e549badc45574729f695f.jpg"><h4>Cubo 20W</h4><p>S/ 35</p><button onclick="buyAcc('Cubo 20W')">+</button></div>
+            <div class="mini-card searchable"><img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGKN4?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1758235411307"><h4>Cubo 35W Dual</h4><p>S/ 45</p><button onclick="buyAcc('Cubo 35W')">+</button></div>
+            <div class="mini-card searchable"><img src="https://5.imimg.com/data5/SELLER/Default/2024/7/436201180/YZ/XE/ZP/26276166/apple-magsafe-power-bank-1000x1000.jpg"><h4>MagSafe 20k</h4><p>S/ 80</p><button onclick="buyAcc('Bat 20k')">+</button></div>
+            <div class="mini-card searchable"><img src="https://i.pinimg.com/736x/28/08/49/2808490bdc57b84b63c57683f71db638.jpg"><h4>Cable Lightning</h4><p>S/ 30</p><button onclick="buyAcc('Cable L')">+</button></div>
+            <div class="mini-card searchable"><img src="https://i.pinimg.com/1200x/d1/3a/76/d13a76ded0afef3885a23d95e5393ce9.jpg"><h4>Cable USB-C</h4><p>S/ 35</p><button onclick="buyAcc('Cable C')">+</button></div>
+        </div>
+    </div>
+
+    <div class="category-group">
+        <h3>Protección</h3>
+        <div class="apple-scroll">
+            <div class="mini-card searchable"><img src="https://thephoneco.in/cdn/shop/files/IMG_8082.jpg?v=1724308644&width=2000"><h4>Case de silicona</h4><p>S/ 25</p><button onclick="buyAcc('Silicon Case')">+</button></div>
+            <div class="mini-card searchable"><img src="https://oechsle.vteximg.com.br/arquivos/ids/16238287-1000-1000/image-0bd817eaebb44472b438757310adad13.jpg?v=638304768300170000"><h4>Case MagSafe</h4><p>S/ 35</p><button onclick="buyAcc('Clear Case')">+</button></div>
+            <div class="mini-card searchable"><img src="https://f.fcdn.app/imgs/ef3a1b/www.cellularcenter.com.uy/celluy/ba86/original/catalogo/CAIP16PBKT_CAIP16PBKT_1/2000-2000/pack-protector-engomado-iphone-16-pro-2-vidrios-templados-pack-protector-engomado-iphone-16-pro-2-vidrios-templados.jpg"><h4>Vidrio Templado</h4><p>S/ 15</p><button onclick="buyAcc('Mica')">+</button></div>
+        </div>
+    </div>
+</section>
+
+<section id="referencias" class="section-trust">
+    <div class="container">
+        <header class="header-minimal">
+            <h2 class="title-apple">Tu confianza es nuestra prioridad.</h2>
+        </header>
+
+        <div class="trust-main-grid">
+            
+            <div class="trust-card">
+                <div class="card-info">
+                    <h3>Contra Entregas</h3>
+                    <p>Sullana y Piura</p>
+                </div>
+                <div class="inner-carousel">
+                    <img src="contra 1.jpeg" alt="Entrega 1">
+                    <img src="contra 2.jpeg" alt="Entrega 2">
+                    <img src="contra 3.jpeg" alt="Entrega 3">
+                    <img src="contra 4.jpeg" alt="Entrega 4">
+                    <img src="contra 5.jpeg" alt="Entrega 5">
+                </div>
+                <div class="scroll-hint">Desliza para ver más →</div>
+            </div>
+
+            <div class="trust-card">
+                <div class="card-info">
+                    <h3>Envíos Nacionales</h3>
+                    <p>Todo el Perú</p>
+                </div>
+                <div class="inner-carousel">
+                    <img src="envio 1.jpeg" alt="Envio 1">
+                    <img src="envio 2.jpeg" alt="Envio 2">
+                    <img src="envio 3.jpeg" alt="Envio 3">
+                    <img src="envio 4.jpeg" alt="Envio 4">
+                    <img src="envio 5.jpeg" alt="Envio 5">
+                </div>
+                <div class="scroll-hint">Desliza para ver más →</div>
+            </div>
+
+            <div class="trust-card">
+                <div class="card-info">
+                    <h3>Clientes Satisfechos</h3>
+                    <p>Opiniones reales</p>
+                </div>
+                <div class="inner-carousel">
+                    <img src="cliente feliz 1.jpeg" alt="Cliente 1">
+                    <img src="cliente feliz 2.jpeg" alt="Cliente 2">
+                    <img src="cliente feliz 3.jpeg" alt="Cliente 3">
+                    <img src="cliente feliz 4.jpeg" alt="Cliente 4">
+                    <img src="cliente feliz 5.jpeg" alt="Cliente 5">
+                </div>
+                <div class="scroll-hint">Desliza para ver más →</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="section-contact">
+    <div class="container-apple">
+        <header class="contact-header">
+            <h2 class="title-apple">Estamos cerca de ti.</h2>
+            <p class="description-apple">Visítanos en nuestra tienda física o escríbenos para asesorarte personalmente.</p>
+        </header>
+
+        <div class="contact-grid">
+            <div class="contact-box">
+                <form action="https://formspree.io/f/keninherastineo05@gmail.com" method="POST" id="contact-form">
+                    <div class="input-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">¿En qué podemos ayudarte?</label>
+                        <textarea id="message" name="mensaje" rows="4" placeholder="Cuéntanos qué producto te interesa..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-apple">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <div class="map-box">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15891.467406263593!2d-80.69747195!3d-4.8953185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9035fb1108269d71%3A0x6a08479c94590c8a!2sSullana!5e0!3m2!1ses!2spe!4v1700000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <div class="location-info">
+                    <strong>Sullana, Piura</strong>
+                    <p>Visítanos de Lunes a Sábado • Atención Inmediata</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="apple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <span>Productos</span>
+            <span>Soporte</span>
+            <span>Garantía</span>
+        </div>
+        <hr class="footer-divider">
+        <p>© 2026 iFusion Shop. Sullana, Perú. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<a href="https://wa.me/51991068893" class="float-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-WhatsApp"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+    <span>WhatsApp</span>
+</a>
+<a href="https://instagram.com/ifusion_shop" class="float-instagram" target="_blank" aria-label="Síguenos en Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    <span>Instagram</span>
+</a>
 <script>
-    function toggleMenu() {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('overlay');
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('.btn-apple');
+        btn.textContent = 'Enviando...';
+        btn.disabled = true;
+
+        const formData = new FormData(this);
         
-        sidebar.classList.toggle('active');
-        overlay.classList.toggle('active');
-    }
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('¡Mensaje enviado con éxito! Nos contactaremos pronto.');
+                this.reset();
+            } else {
+                alert('Ups! Hubo un problema. Inténtalo de nuevo.');
+            }
+        } catch (error) {
+            alert('Error de conexión. Inténtalo más tarde.');
+        } finally {
+            btn.textContent = 'Enviar mensaje';
+            btn.disabled = false;
+        }
+    });
 </script>
 </body>
-
 </html>
